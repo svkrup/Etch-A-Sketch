@@ -22,7 +22,10 @@ function loadCells(){
         div.style.width=side;
         div.style.height=side;
         div.addEventListener('mouseenter', function(e){
-            e.target.style.backgroundColor='red';
+            let r = Math.random()*255;
+            let g = Math.random()*255;
+            let b = Math.random()*255;
+            e.target.style.backgroundColor=`rgb(${r},${g} ,${b})`;
         })
         div.addEventListener('mouseleave', function(e){
             e.target.style.backgroundColor='aliceblue'
